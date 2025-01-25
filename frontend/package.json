@@ -8,6 +8,12 @@
     "start": "next start",
     "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint . --ext .ts,.tsx -c .eslintrc.json --fix .",
+      "eslint . --ext .ts,.tsx -c .eslintrc.json --fix --max-warnings=0 ."
+    ]
+  },
   "dependencies": {
     "@heroui/button": "2.2.9",
     "@heroui/code": "2.2.6",

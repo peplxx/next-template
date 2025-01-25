@@ -1,7 +1,4 @@
-import { Link } from "@heroui/link";
-
 import { Head } from "./head";
-
 
 export default function DefaultLayout({
   children,
