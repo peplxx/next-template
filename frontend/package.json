@@ -6,11 +6,12 @@
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix"
+    "lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --fix",
+    "check-lint": "eslint . --ext .ts,.tsx -c .eslintrc.json --max-warnings=0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint . --ext .ts,.tsx -c .eslintrc.json --fix .",
+      "npm run lint",
       "eslint . --ext .ts,.tsx -c .eslintrc.json --fix --max-warnings=0 ."
     ]
   },

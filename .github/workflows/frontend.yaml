@@ -52,7 +52,7 @@ jobs:
           cd frontend 
           npm ci
 
-      - name: Build project
+      - name: Check code styling
         run: | 
           cd frontend 
-          eslint . --ext .ts,.tsx -c .eslintrc.json --max-warnings=0 .
+          npm run check-lint
